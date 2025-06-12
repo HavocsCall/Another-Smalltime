@@ -1,6 +1,8 @@
 # SmallTime
 
-This is a copy of 
+This is a copy of [smalltime](https://github.com/unsoluble/smalltime) by unsoluble. The main difference is the addition of a third time step. Unsoluble gave permission to fork and use the code in https://github.com/unsoluble/smalltime/issues/226.
+
+Thank you to them for all of the hard work.
 
 ## Quick Summary
 
