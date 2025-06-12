@@ -8,6 +8,8 @@
   "SMLTME.Calendar_Provider_Hint": "The source of your world's calendar information.",
   "SMLTME.Small_Step": "Small Step Amount",
   "SMLTME.Small_Step_Hint": "Number of minutes to adjust the time with the < and > buttons. Hold Shift to double, Alt to halve.",
+  "SMLTME.Medium_Step": "Medium Step Amount",
+  "SMLTME.Medium_Step_Hint": "Number of minutes to adjust the time with the < and > buttons. Hold Shift to double, Alt to halve.",
   "SMLTME.Large_Step": "Large Step Amount",
   "SMLTME.Large_Step_Hint": "Number of minutes to adjust the time with the << and >> buttons. Hold Shift to double, Alt to halve.",
   "SMLTME.Resting_Opacity": "Resting Opacity",

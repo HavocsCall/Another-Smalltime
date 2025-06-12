@@ -37,23 +37,23 @@ ST_Config.MinDarknessDefault = 0;
 
 export class Helpers {
   static updateSunriseSunsetTimes(data) {
-    if (game.settings.get('smalltime', 'sun-sync') && game.modules.get('foundryvtt-simple-calendar')?.active) {
+    if (game.settings.get('AnotherSmalltime', 'sun-sync') && game.modules.get('foundryvtt-simple-calendar')?.active) {
       // Use defaults if no seasons have been set up.
       if (SimpleCalendar.api.getAllSeasons().length == 0) {
-        game.settings.set('smalltime', 'sunrise-start', ST_Config.SunriseStartDefault);
-        game.settings.set('smalltime', 'sunrise-end', ST_Config.SunriseEndDefault);
-        game.settings.set('smalltime', 'sunset-start', ST_Config.SunsetStartDefault);
-        game.settings.set('smalltime', 'sunset-end', ST_Config.SunsetEndDefault);
+        game.settings.set('AnotherSmalltime', 'sunrise-start', ST_Config.SunriseStartDefault);
+        game.settings.set('AnotherSmalltime', 'sunrise-end', ST_Config.SunriseEndDefault);
+        game.settings.set('AnotherSmalltime', 'sunset-start', ST_Config.SunsetStartDefault);
+        game.settings.set('AnotherSmalltime', 'sunset-end', ST_Config.SunsetEndDefault);
       } else {
         if (typeof data !== 'undefined') {
           const riseEnd = SimpleCalendar.api.timestampToDate(data.date.sunrise).hour * 60 + SimpleCalendar.api.timestampToDate(data.date.sunrise).minute;
           const riseStart = riseEnd - ST_Config.DawnDuskSpread;
           const setStart = SimpleCalendar.api.timestampToDate(data.date.sunset).hour * 60 + SimpleCalendar.api.timestampToDate(data.date.sunset).minute;
           const setEnd = setStart + ST_Config.DawnDuskSpread;
-          game.settings.set('smalltime', 'sunrise-start', riseStart);
-          game.settings.set('smalltime', 'sunrise-end', riseEnd);
-          game.settings.set('smalltime', 'sunset-start', setStart);
-          game.settings.set('smalltime', 'sunset-end', setEnd);
+          game.settings.set('AnotherSmalltime', 'sunrise-start', riseStart);
+          game.settings.set('AnotherSmalltime', 'sunrise-end', riseEnd);
+          game.settings.set('AnotherSmalltime', 'sunset-start', setStart);
+          game.settings.set('AnotherSmalltime', 'sunset-end', setEnd);
         }
       }
     }
@@ -81,10 +81,10 @@ export class Helpers {
     // Make the CSS linear gradient stops proportionally match the custom sunrise/sunset times.
     // Also used to build the gradient stops in the Settings screen.
     const initialPositions = {
-      sunriseStart: Helpers.convertTimeIntegerToPosition(game.settings.get('smalltime', 'sunrise-start')),
-      sunriseEnd: Helpers.convertTimeIntegerToPosition(game.settings.get('smalltime', 'sunrise-end')),
-      sunsetStart: Helpers.convertTimeIntegerToPosition(game.settings.get('smalltime', 'sunset-start')),
-      sunsetEnd: Helpers.convertTimeIntegerToPosition(game.settings.get('smalltime', 'sunset-end')),
+      sunriseStart: Helpers.convertTimeIntegerToPosition(game.settings.get('AnotherSmalltime', 'sunrise-start')),
+      sunriseEnd: Helpers.convertTimeIntegerToPosition(game.settings.get('AnotherSmalltime', 'sunrise-end')),
+      sunsetStart: Helpers.convertTimeIntegerToPosition(game.settings.get('AnotherSmalltime', 'sunset-start')),
+      sunsetEnd: Helpers.convertTimeIntegerToPosition(game.settings.get('AnotherSmalltime', 'sunset-end')),
     };
 
     const sunriseMiddle1 = Math.round((initialPositions.sunriseStart * 2) / 3 + (initialPositions.sunriseEnd * 1) / 3);
@@ -95,7 +95,7 @@ export class Helpers {
     // Set the initial gradient transition points.
     document.documentElement.style.setProperty(
       '--SMLTME-sunrise-start',
-      Helpers.convertTimeIntegerToPercentage(game.settings.get('smalltime', 'sunrise-start'))
+      Helpers.convertTimeIntegerToPercentage(game.settings.get('AnotherSmalltime', 'sunrise-start'))
     );
     document.documentElement.style.setProperty(
       '--SMLTME-sunrise-middle-1',
@@ -105,8 +105,8 @@ export class Helpers {
       '--SMLTME-sunrise-middle-2',
       Helpers.convertTimeIntegerToPercentage(Helpers.convertPositionToTimeInteger(sunriseMiddle2))
     );
-    document.documentElement.style.setProperty('--SMLTME-sunrise-end', Helpers.convertTimeIntegerToPercentage(game.settings.get('smalltime', 'sunrise-end')));
-    document.documentElement.style.setProperty('--SMLTME-sunset-start', Helpers.convertTimeIntegerToPercentage(game.settings.get('smalltime', 'sunset-start')));
+    document.documentElement.style.setProperty('--SMLTME-sunrise-end', Helpers.convertTimeIntegerToPercentage(game.settings.get('AnotherSmalltime', 'sunrise-end')));
+    document.documentElement.style.setProperty('--SMLTME-sunset-start', Helpers.convertTimeIntegerToPercentage(game.settings.get('AnotherSmalltime', 'sunset-start')));
     document.documentElement.style.setProperty(
       '--SMLTME-sunset-middle-1',
       Helpers.convertTimeIntegerToPercentage(Helpers.convertPositionToTimeInteger(sunsetMiddle1))
@@ -115,39 +115,39 @@ export class Helpers {
       '--SMLTME-sunset-middle-2',
       Helpers.convertTimeIntegerToPercentage(Helpers.convertPositionToTimeInteger(sunsetMiddle2))
     );
-    document.documentElement.style.setProperty('--SMLTME-sunset-end', Helpers.convertTimeIntegerToPercentage(game.settings.get('smalltime', 'sunset-end')));
+    document.documentElement.style.setProperty('--SMLTME-sunset-end', Helpers.convertTimeIntegerToPercentage(game.settings.get('AnotherSmalltime', 'sunset-end')));
   }
 
   static async saveNewDarknessConfig(positions, max, min) {
     // Set the hidden inputs for these settings to the new values,
     // so that the form-saving workflow takes care of saving them.
-    $('input[name="smalltime.sunrise-start"]').val(Helpers.convertPositionToTimeInteger(positions.sunriseStart));
-    $('input[name="smalltime.sunrise-end"]').val(Helpers.convertPositionToTimeInteger(positions.sunriseEnd));
-    $('input[name="smalltime.sunset-start"]').val(Helpers.convertPositionToTimeInteger(positions.sunsetStart));
-    $('input[name="smalltime.sunset-end"]').val(Helpers.convertPositionToTimeInteger(positions.sunsetEnd));
+    $('input[name="AnotherSmalltime.sunrise-start"]').val(Helpers.convertPositionToTimeInteger(positions.sunriseStart));
+    $('input[name="AnotherSmalltime.sunrise-end"]').val(Helpers.convertPositionToTimeInteger(positions.sunriseEnd));
+    $('input[name="AnotherSmalltime.sunset-start"]').val(Helpers.convertPositionToTimeInteger(positions.sunsetStart));
+    $('input[name="AnotherSmalltime.sunset-end"]').val(Helpers.convertPositionToTimeInteger(positions.sunsetEnd));
 
     // Set the max or min Darkness, depending on which was passed.
-    if (min === false) $('input[name="smalltime.max-darkness"]').val(max);
-    if (max === false) $('input[name="smalltime.min-darkness"]').val(min);
+    if (min === false) $('input[name="AnotherSmalltime.max-darkness"]').val(max);
+    if (max === false) $('input[name="AnotherSmalltime.min-darkness"]').val(min);
   }
 
   static setupDragHandles() {
     // If sunrise/sunset are being synced from Simple Calendar, we'll lock
     // the drag handles on the X axis.
-    const sunSync = game.settings.get('smalltime', 'sun-sync') && game.modules.get('foundryvtt-simple-calendar')?.active;
+    const sunSync = game.settings.get('AnotherSmalltime', 'sun-sync') && game.modules.get('foundryvtt-simple-calendar')?.active;
 
     // Build the sun/moon drag handles for the darkness config UI.
-    const maxDarkness = game.settings.get('smalltime', 'max-darkness');
-    const minDarkness = game.settings.get('smalltime', 'min-darkness');
+    const maxDarkness = game.settings.get('AnotherSmalltime', 'max-darkness');
+    const minDarkness = game.settings.get('AnotherSmalltime', 'min-darkness');
 
     document.documentElement.style.setProperty('--SMLTME-darkness-max', maxDarkness);
     document.documentElement.style.setProperty('--SMLTME-darkness-min', minDarkness);
 
     const initialPositions = {
-      sunriseStart: Helpers.convertTimeIntegerToPosition(game.settings.get('smalltime', 'sunrise-start')),
-      sunriseEnd: Helpers.convertTimeIntegerToPosition(game.settings.get('smalltime', 'sunrise-end')),
-      sunsetStart: Helpers.convertTimeIntegerToPosition(game.settings.get('smalltime', 'sunset-start')),
-      sunsetEnd: Helpers.convertTimeIntegerToPosition(game.settings.get('smalltime', 'sunset-end')),
+      sunriseStart: Helpers.convertTimeIntegerToPosition(game.settings.get('AnotherSmalltime', 'sunrise-start')),
+      sunriseEnd: Helpers.convertTimeIntegerToPosition(game.settings.get('AnotherSmalltime', 'sunrise-end')),
+      sunsetStart: Helpers.convertTimeIntegerToPosition(game.settings.get('AnotherSmalltime', 'sunset-start')),
+      sunsetEnd: Helpers.convertTimeIntegerToPosition(game.settings.get('AnotherSmalltime', 'sunset-end')),
     };
 
     const initialTimes = {
@@ -432,7 +432,7 @@ export class Helpers {
   // If the calendar provider is set to a module that isn't currently enabled,
   // fall back to using PF2E's calendar, if in PF2E.
   static setCalendarFallback() {
-    const providerSetting = game.settings.get('smalltime', 'calendar-provider');
+    const providerSetting = game.settings.get('AnotherSmalltime', 'calendar-provider');
 
     if (!game.user.isGM) return;
 
@@ -443,7 +443,7 @@ export class Helpers {
       (providerSetting === 'cw' && !game.modules.get('calendar-weather')?.active) ||
       (providerSetting === 'pf2e' && !(game.system.id === 'pf2e'))
     ) {
-      game.settings.set('smalltime', 'calendar-provider', Helpers.getCalendarProviders()[0]);
+      game.settings.set('AnotherSmalltime', 'calendar-provider', Helpers.getCalendarProviders()[0]);
     }
   }
 
@@ -454,7 +454,7 @@ export class Helpers {
     $('#minuteString').html(SmallTimeApp.convertTimeIntegerToDisplay(timeInteger).minutes);
 
     // Calculate and show the current seconds if required.
-    if (game.settings.get('smalltime', 'time-format') == 24 && game.settings.get('smalltime', 'show-seconds') == true) {
+    if (game.settings.get('AnotherSmalltime', 'time-format') == 24 && game.settings.get('AnotherSmalltime', 'show-seconds') == true) {
       const currentWorldTime = game.time.worldTime + ST_Config.EpochOffset;
       let seconds;
       if (currentWorldTime < 0) {
@@ -594,7 +594,7 @@ export class Helpers {
     }
     if (!sceneBG || sceneBG.startsWith('data')) {
       // Generic scene slice provided by MADCartographer -- thanks! :)
-      sceneBG = 'modules/smalltime/images/generic-bg.webp';
+      sceneBG = 'modules/AnotherSmalltime/images/generic-bg.webp';
     }
     // Check for absolute path here, to account for assets on Forge or other buckets.
     if (sceneBG.startsWith('http')) {
@@ -723,7 +723,7 @@ export class Helpers {
   // Values span from 0.0 to 1.0 to mimic brightness levels of the various phases.
   static async adjustMoonlight(phases) {
     // Only perform this adjustment if the setting is enabled.
-    if (!game.scenes.viewed.getFlag('smalltime', 'moonlight') || !phases.length) return;
+    if (!game.scenes.viewed.getFlag('AnotherSmalltime', 'moonlight') || !phases.length) return;
     let newThreshold = 0;
     phases.forEach((phase) => {
       switch (phase) {

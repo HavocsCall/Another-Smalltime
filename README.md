@@ -1,6 +1,6 @@
 # SmallTime
 
-_A small module for displaying and controlling the current time of day._
+This is a copy of 
 
 ## Quick Summary
 
@@ -72,4 +72,4 @@ I'm happy to accept and implement more translations!
 
 ### Need Help?
 
-If something's not working right, or you've got other questions or comments, feel free to hit me up on the [Discord](https://discord.gg/foundryvtt) (@unsoluble#5084), or file a [ticket](https://github.com/unsoluble/smalltime/issues).
+If something's not working right, or you've got other questions or comments, feel free to hit me up on the [Discord](https://discord.gg/foundryvtt) (@HavocsCall), or file a [ticket](https://github.com/HavocsCall/AnotherSmalltime/issues).

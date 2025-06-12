@@ -8,6 +8,8 @@
   "SMLTME.Calendar_Provider_Hint": "Le module de calendrier utilisé.",
   "SMLTME.Small_Step": "Pas horaire (petit)",
   "SMLTME.Small_Step_Hint": "Nombre de minutes à rajouter/retirer de l'horloge avec les boutons < et >. Appuyez sur Maj pour doubler.",
+  "SMLTME.Medium_Step": "Medium Step Amount",
+  "SMLTME.Medium_Step_Hint": "Number of minutes to adjust the time with the < and > buttons. Hold Shift to double, Alt to halve.",
   "SMLTME.Large_Step": "Pas horaire (grand)",
   "SMLTME.Large_Step_Hint": "Nombre de minutes à rajouter/retirer de l'horloge avec les boutons << et >>. Appuyez sur Maj pour doubler.",
   "SMLTME.Resting_Opacity": "Opacité au repos",

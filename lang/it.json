@@ -8,6 +8,8 @@
 	"SMLTME.Calendar_Provider_Hint": "Il calendario da cui SmallTime acquisirà le informazioni.",
 	"SMLTME.Small_Step": "Step (piccolo)",
 	"SMLTME.Small_Step_Hint": "Numero di minuti da regolare tramite i tasti < e >. Tieni premuto Shift per raddoppiare, Alt per dimezzare.",
+	"SMLTME.Medium_Step": "Medium Step Amount",
+  	"SMLTME.Medium_Step_Hint": "Number of minutes to adjust the time with the < and > buttons. Hold Shift to double, Alt to halve.",
 	"SMLTME.Large_Step": "Step (grande)",
 	"SMLTME.Large_Step_Hint": "Numero di minuti da regolare tramite i tasti << e >>. Tieni premuto Shift per raddoppiare, Alt per dimezzare.",
 	"SMLTME.Resting_Opacity": "Opacità se inattivo",

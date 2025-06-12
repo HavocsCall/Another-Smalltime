@@ -8,6 +8,8 @@
   "SMLTME.Calendar_Provider_Hint": "A fonte de informações de calendário do seu Mundo.",
   "SMLTME.Small_Step": "Curto Salto de Tempo",
   "SMLTME.Small_Step_Hint": "Número de minutos adicionados/removidos a partir de < e >. Segure shift para dobrá-los.",
+  "SMLTME.Medium_Step": "Medium Step Amount",
+  "SMLTME.Medium_Step_Hint": "Number of minutes to adjust the time with the < and > buttons. Hold Shift to double, Alt to halve.",
   "SMLTME.Large_Step": "Longo Salto Tempo",
   "SMLTME.Large_Step_Hint": "Número de minutos adicionados/removidos a partir de << e >>. Segure shift para dobrá-los.",
   "SMLTME.Resting_Opacity": "Opacidade em Modo de Repouso",

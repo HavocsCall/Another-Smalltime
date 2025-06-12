@@ -9,6 +9,8 @@
   "SMLTME.Calendar_Provider_Hint": "この世界のカレンダーの情報源を指定します。",
   "SMLTME.Small_Step": "ボタンによる時間変化（小）",
   "SMLTME.Small_Step_Hint": "「<」「>」ボタンで進む／戻る時間を分単位で指定します。［Shift］キー押下時は2倍です。",
+  "SMLTME.Medium_Step": "Medium Step Amount",
+  "SMLTME.Medium_Step_Hint": "Number of minutes to adjust the time with the < and > buttons. Hold Shift to double, Alt to halve.",
   "SMLTME.Large_Step": "ボタンによる時間変化（大）",
   "SMLTME.Large_Step_Hint": "「<<」「>>」ボタンで進む／戻る時間を分単位で指定します。［Shift］キー押下時は2倍です。",
   "SMLTME.Resting_Opacity": "待機時の不透明度",

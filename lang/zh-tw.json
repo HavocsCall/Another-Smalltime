@@ -8,6 +8,8 @@
   "SMLTME.Calendar_Provider_Hint": "你世界中日曆資訊的具體來源",
   "SMLTME.Small_Step": "進/退（小）數值",
   "SMLTME.Small_Step_Hint": "使用 < 和 > 按鈕調整時間時，改變的分鐘數。按住 Shift 可以翻倍，按住 Alt 可以減半。",
+  "SMLTME.Medium_Step": "Medium Step Amount",
+  "SMLTME.Medium_Step_Hint": "Number of minutes to adjust the time with the < and > buttons. Hold Shift to double, Alt to halve.",
   "SMLTME.Large_Step": "進/退（大）數值",
   "SMLTME.Large_Step_Hint": "使用 << 和 >> 按鈕調整時間時，改變的分鐘數。按住 Shift 可以翻倍，按住 Alt 可以減半。",
   "SMLTME.Resting_Opacity": "靜止狀態透明度",

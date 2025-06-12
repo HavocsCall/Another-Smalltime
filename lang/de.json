@@ -8,6 +8,8 @@
   "SMLTME.Calendar_Provider_Hint": "Quelle der Kalenderinformationen für diese Welt.",
   "SMLTME.Small_Step": "Kleiner Schritt",
   "SMLTME.Small_Step_Hint": "Minutenanzahl, die mit < und > hinzugefügt / entfernt wird. Umschalttaste zum verdoppeln.",
+  "SMLTME.Medium_Step": "Medium Step Amount",
+  "SMLTME.Medium_Step_Hint": "Number of minutes to adjust the time with the < and > buttons. Hold Shift to double, Alt to halve.",
   "SMLTME.Large_Step": "Großer Schritt",
   "SMLTME.Large_Step_Hint": "Minutenanzahl, die mit << und >> hinzugefügt / entfernt wird. Umschalttaste zum verdoppeln.",
   "SMLTME.Resting_Opacity": "Transparenz bei Inaktivität",

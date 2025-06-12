@@ -8,6 +8,8 @@
   "SMLTME.Calendar_Provider_Hint": "Źródło informacji o kalendarzu świata.",
   "SMLTME.Small_Step": "Wartość niewielkich zmian",
   "SMLTME.Small_Step_Hint": "Liczba minut do dostosowania czasu za pomocą przycisków < i >. Przytrzymaj Shift, aby podwoić, Alt, aby zmniejszyć o połowę.",
+  "SMLTME.Medium_Step": "Medium Step Amount",
+  "SMLTME.Medium_Step_Hint": "Number of minutes to adjust the time with the < and > buttons. Hold Shift to double, Alt to halve.",
   "SMLTME.Large_Step": "Wartość większych zmian",
   "SMLTME.Large_Step_Hint": "Liczba minut do dostosowania czasu za pomocą przycisków << i >>. Przytrzymaj Shift, aby podwoić, Alt, aby zmniejszyć o połowę.",
   "SMLTME.Resting_Opacity": "Przeźroczystość w tle",
