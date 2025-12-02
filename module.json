@@ -8,86 +8,111 @@
   "authors": [
     {
       "name": "HavocsCall",
-      "discord": "HavocsCall"
+      "discord": "HavocsCall",
+      "flags": {}
     }
   ],
   "compatibility": {
-    "minimum": 13,
-    "verified": 13
+    "minimum": "13",
+    "verified": "13"
   },
   "media": [
     {
       "type": "cover",
       "url": "https://raw.githubusercontent.com/HavocsCall/AnotherSmalltime/refs/heads/main/images/manifest-cover.webp",
-      "caption": "AnotherSmalltime"
+      "caption": "AnotherSmalltime",
+      "loop": false,
+      "flags": {}
     },
     {
       "type": "setup",
-      "thumbnail": "modules/AnotherSmalltime/images/manifest-cover.webp"
+      "thumbnail": "modules/AnotherSmalltime/images/manifest-cover.webp",
+      "loop": false,
+      "flags": {}
     }
   ],
-  "esmodules": ["scripts/AnotherSmalltime-app.mjs"],
-  "scripts": ["scripts/draggabilly.min.js"],
-  "styles": ["styles/AnotherSmalltime.css"],
+  "esmodules": [
+    "scripts/AnotherSmalltime-app.mjs"
+  ],
+  "scripts": [
+    "scripts/draggabilly.min.js"
+  ],
+  "styles": [
+    {
+      "src": "styles/AnotherSmalltime.css"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     },
     {
       "lang": "ja",
       "name": "日本語",
-      "path": "lang/ja.json"
+      "path": "lang/ja.json",
+      "flags": {}
     },
     {
       "lang": "de",
       "name": "Deutsch",
-      "path": "lang/de.json"
+      "path": "lang/de.json",
+      "flags": {}
     },
     {
       "lang": "es",
       "name": "Español",
-      "path": "lang/es.json"
+      "path": "lang/es.json",
+      "flags": {}
     },
     {
       "lang": "fr",
       "name": "Français",
-      "path": "lang/fr.json"
+      "path": "lang/fr.json",
+      "flags": {}
     },
     {
       "lang": "ko",
       "name": "Korean",
-      "path": "lang/ko.json"
+      "path": "lang/ko.json",
+      "flags": {}
     },
     {
       "lang": "pt-BR",
       "name": "Português (Brasil)",
-      "path": "lang/pt-BR.json"
+      "path": "lang/pt-BR.json",
+      "flags": {}
     },
     {
       "lang": "cn",
       "name": "简体中文",
-      "path": "lang/cn.json"
+      "path": "lang/cn.json",
+      "flags": {}
     },
     {
       "lang": "zh-tw",
       "name": "正體中文",
-      "path": "lang/zh-tw.json"
+      "path": "lang/zh-tw.json",
+      "flags": {}
     },
     {
       "lang": "it",
       "name": "Italiano",
-      "path": "lang/it.json"
+      "path": "lang/it.json",
+      "flags": {}
     },
     {
       "lang": "pl",
       "name": "Polski",
-      "path": "lang/pl.json"
+      "path": "lang/pl.json",
+      "flags": {}
     }
   ],
   "socket": true,
-  "url": "https://github.com/HavocsCall/AnotherSmalltime",
-  "manifest": "https://github.com/HavocsCall/AnotherSmalltime/releases/latest/download/module.json",
-  "download": "https://github.com/HavocsCall/AnotherSmalltime/releases/download/1.0.0/module.zip"
+  "url": "https://github.com/HavocsCall/Another-Smalltime",
+  "manifest": "https://github.com/HavocsCall/Another-Smalltime/releases/latest/download/module.json",
+  "download": "https://github.com/HavocsCall/Another-Smalltime/releases/download/1.0.0/module.zip",
+  "flags": {}
 }

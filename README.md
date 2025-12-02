@@ -4,6 +4,13 @@ This is a copy of [smalltime](https://github.com/unsoluble/smalltime) by unsolub
 
 Thank you to them for all of the hard work.
 
+## Installation
+
+For now, use this link in the install module field in FoundryVTT.
+```
+https://github.com/HavocsCall/Another-Smalltime/releases/latest/download/module.json
+```
+
 ## Quick Summary
 
 - Drag the sun/moon or click the forward/back buttons to change the time.
